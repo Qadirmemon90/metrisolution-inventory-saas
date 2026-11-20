@@ -1,0 +1,102 @@
+/* MetriSolution Inventory ERP SaaS - Invoice & Receipt Print Stylesheet */
+
+@media print {
+  /* Hide interactive application shell */
+  .demo-control-bar,
+  .erp-sidebar,
+  .erp-topbar,
+  .public-navbar,
+  .public-footer,
+  .btn,
+  .no-print,
+  .modal-footer {
+    display: none !important;
+  }
+
+  body, #app, .erp-layout, .erp-main-area, .erp-content-viewport {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-invoice-sheet {
+    display: block !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 12pt !important;
+    color: #000000 !important;
+  }
+
+  .print-invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .print-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 16px 0 !important;
+  }
+
+  .print-table th,
+  .print-table td {
+    border: 1px solid #333333 !important;
+    padding: 6px 10px !important;
+    font-size: 10pt !important;
+    color: #000000 !important;
+  }
+
+  .print-table th {
+    background-color: #F0F0F0 !important;
+    font-weight: bold !important;
+  }
+
+  .print-totals {
+    float: right;
+    width: 280px;
+    margin-top: 10px;
+    font-size: 11pt;
+  }
+
+  .print-totals-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  .print-totals-row.grand-total {
+    font-weight: bold;
+    font-size: 13pt;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    margin-top: 4px;
+    padding: 6px 0;
+  }
+
+  .print-footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 9pt;
+    color: #555555;
+    border-top: 1px solid #CCCCCC;
+    padding-top: 8px;
+  }
+
+  /* 80mm Thermal Receipt Mode */
+  .receipt-80mm {
+    width: 72mm !important;
+    margin: 0 auto !important;
+    font-size: 9pt !important;
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+}

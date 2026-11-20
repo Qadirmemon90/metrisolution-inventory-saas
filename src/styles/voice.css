@@ -1,0 +1,357 @@
+/* MetriSolution Inventory ERP SaaS - Modernized Voice Intelligence Center Styles */
+
+.voice-center-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-6);
+  height: calc(100vh - var(--topbar-height) - var(--demo-bar-height) - 100px);
+}
+
+/* Left: Threads / Inbound Voice Notes */
+.voice-threads-pane {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(228, 231, 236, 0.9);
+  border-radius: var(--radius-card);
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.voice-threads-header {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background-color: #FAFCFE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.voice-threads-list {
+  flex: 1;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.voice-thread-item {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  position: relative;
+}
+
+.voice-thread-item:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.voice-thread-item.active {
+  background: linear-gradient(90deg, var(--color-primary-soft) 0%, #FFFFFF 100%);
+  border-left: 3px solid var(--color-primary);
+}
+
+.voice-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.25);
+}
+
+.voice-thread-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.voice-thread-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.voice-sender-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-navy);
+}
+
+.voice-timestamp {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.voice-snippet {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Right: Active Voice Note Inspection & AI Draft Pipeline */
+.voice-inspector-pane {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(228, 231, 236, 0.9);
+  border-radius: var(--radius-card);
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.voice-inspector-header {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFCFE;
+}
+
+.voice-inspector-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* WhatsApp Player Card */
+.whatsapp-player-card {
+  background: #EFEAE2; /* Authentic WhatsApp chat wallpaper tone */
+  border-radius: 14px;
+  padding: var(--space-4);
+  border: 1px solid #E2DCD2;
+  max-width: 500px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.whatsapp-bubble {
+  background: #FFFFFF;
+  border-radius: 12px 12px 12px 0;
+  padding: var(--space-3) var(--space-4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.audio-controls-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.audio-play-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
+}
+
+.audio-play-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 14px rgba(37, 211, 102, 0.45);
+}
+
+.audio-play-btn:active {
+  transform: scale(0.96);
+}
+
+.waveform-container {
+  flex: 1;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.waveform-bar {
+  flex: 1;
+  background-color: #CBD5E1;
+  border-radius: 3px;
+  transition: height var(--transition-fast), background-color var(--transition-fast);
+}
+
+.waveform-bar.played {
+  background-color: #25D366;
+}
+
+.audio-duration {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-family-mono);
+  align-self: flex-end;
+}
+
+/* Transcription Card */
+.transcript-card {
+  background-color: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-4);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.02);
+}
+
+.transcript-urdu {
+  font-size: 1.1875rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+  line-height: 1.7;
+  font-family: system-ui, -apple-system, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.transcript-english {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  line-height: 1.5;
+  border-top: 1px dashed var(--color-border);
+  padding-top: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* AI Extraction Pipeline Card */
+.ai-draft-pipeline-card {
+  border: 1px solid rgba(105, 65, 198, 0.2);
+  background: linear-gradient(180deg, #FAF8FF 0%, #FFFFFF 100%);
+  border-radius: 14px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: 0 2px 8px rgba(105, 65, 198, 0.04);
+}
+
+.ai-pipeline-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-confidence-pill {
+  background-color: var(--color-success-soft);
+  color: var(--color-success);
+  border: 1px solid var(--color-success-border);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.entity-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.entity-chip {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.02);
+}
+
+.entity-chip-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.entity-chip-value {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+/* Disambiguation Candidates */
+.candidate-picker-box {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-4);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.02);
+}
+
+.candidate-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-subtle);
+  margin-top: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: #FFFFFF;
+}
+
+.candidate-option:hover {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-primary-soft);
+}
+
+.candidate-option.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+  box-shadow: 0 0 0 1px var(--color-primary) inset;
+}
+
+.candidate-radio {
+  accent-color: var(--color-primary);
+  width: 18px;
+  height: 18px;
+}
+
+/* Action Controls Bar */
+.voice-approval-bar {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background-color: #FAFCFE;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@media (max-width: 900px) {
+  .voice-center-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}

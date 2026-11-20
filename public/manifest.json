@@ -1,0 +1,26 @@
+{
+  "name": "MetriSolution Inventory ERP SaaS",
+  "short_name": "MetriSolution",
+  "description": "Retail-first inventory, high-speed POS, and operations management platform with WhatsApp Voice AI",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#6941C6",
+  "orientation": "any",
+  "categories": ["business", "productivity", "shopping"],
+  "icons": [
+    {
+      "src": "/metrisolution-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/metrisolution-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
